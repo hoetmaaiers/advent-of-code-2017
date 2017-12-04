@@ -6,7 +6,7 @@ defmodule Puzzle do
   def solve() do
     @input
     |> parse
-    |> Enum.map(&valid_passphrase(&1))
+    |> Enum.map(valid_passphrase/1))
     |> Enum.filter(fn(x) -> x end)
     |> length
     |> IO.inspect
